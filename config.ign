@@ -1,0 +1,142 @@
+{
+  "ignition": {
+    "version": "3.5.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDfj8m3MNCtwD1vpeo3zPvpLCbGNpVSn46xYBKP6TbeFnLXwuKPb9AskW8fIlwId/qpQl6jyqTx7YAtUGxpzPw71T2aQSKm+X1w9SQr1PM7kDADCTwpbgIfDmiZhPnafHDQ46GshoHJSep7LypOiRetd9FBmTITX+rrToBNsh+yqYOAgJRJzIfPmIh0b5Y//9dXu9AQd6mUusc3zCkRJo8Xz1T/5H6FfhUAOZg2XMHUsOjuYzoECHEmytIQC7lg3fss9eo9yGV86Z97yCULObzi5L1f59P9urDiMfuS1LYdwYxptMYbm7XaGm9XFh/DIzCRn4T/rXQOEXjbhr0yI+udwts4fV9s60hp1oxuBXNQyFIq7W0DUEws+NoCthKlEbtLKgudVoUZ0lww2JjN+UXqzliUG868ZxdSZmjzJAWYJ1LeiJDkvwcGZVgoPxMGmKzXSp1P5Z7NfXd9R5+FRfrY+5Nxe2yiwODmLeaN4yuFUhDOf63lrwdyD5JHWPqdTWQT2s6/Q33rksNw9rouL2pscKzM5gTImi6J9OJlCm7/nzc+TCGQfCGzrojGRGXinkMbZuI924hBcfM3hFkH4mBtMUVcq0vRtMr27L3x27ePmkKxtY36a6PbGrP+DTous6iN+L9huysQDRcs7qHad/87UnWep6n5jrm+jbgvSDh+Rw== afrosi@redhat.com"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "directories": [
+      {
+        "overwrite": true,
+        "path": "/var/kbs/config"
+      },
+      {
+        "overwrite": true,
+        "path": "/var/rvps"
+      },
+      {
+        "overwrite": true,
+        "path": "/var/as"
+      }
+    ],
+    "files": [
+      {
+        "path": "/etc/profile.d/systemd-pager.sh",
+        "contents": {
+          "compression": "",
+          "source": "data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/key-generation.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/5ySzW4UMRCE736KJofcZg1IOZCVkfiJUITEiZ/DsgfPTM1uazxtq90OmbdHG5KICwhSJ8su19ct1e6LsO3de9RBuRhnCZ+1VQPoI1b6AIFGy+q+RbEaBPYj69xlSSzYWNQDzL2ZDPqHN7d7l8UiC3TvHo+f4oIwYy2ab3iEuuslHhDGPMzQDWcfU2GBzwVSa7pM0VDNXYnpWjKLBd+z+FiP7mtObUFoFdrNWOulz8X8kGXiEWIcUzc8YKuf++ofre7qFkPoBjrjiXb0jLpK//7bF+WbaNjMWGm/JTtC6Luje/lW9W7I+x3oACknaxfTISvbcSGMLy8uXryi10/Fnp//jfgLx/LU9K60Pjf7DXFSd7r6n8TWJx42pfVbQqog3LLR8y1NvD1zbnct1WJK+7uKYXy7hhFTbMkeKvQzAAD//8zaHHikAgAA"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/var/kbs/config/kbs-config.toml",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/4yOsWorMRBFe32FUG9LxXtgDG5T5Q8WIWa1E6/YtUbMjAL790FOCClShCnn3nvOtKq2JMjvyNEI5Q1V7M1OLpyfd72ES3DRlCqYO2MaBXuzyh2NmUAVRUEL1aS0Yf2R3PD4PThwJWM0ejS0N+syZUog6c4tOwOSYFl4PAbs6j3I9X8I4Z8bQ8uj1Gig65pan/eSv0DOU1Ofqb6VBasW2E+ZqkKpyOK3WXwX5NOGh/jP4rn1eUxObe/3UiVGU+HxNGIU6pzRfTu+Uob9RZxZCqcGuv4JydhIihIfznwEAAD//+NUPzBsAQAA"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/kbs.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/5yQvW7jMBCE+30KvQBFl4YBNr5zYRxgGLi/wudiRa1lQhQp7K4uUZ4+UBSpSwykIYbgfLPDvfxOQa/wncRz6DXk5H7xIEpU/Nj/LHxOiiERA1y+LfoKqzxhR66tBI4dNuSau+cyZOtzuoWakgaMZs0QK4oN1SZMZrFtJabh3huUXUQlUTiRPmVunc4dyjTf4ZCUxz6HpM4OwjZmj9FWIU0hcB6qGOR+zqxuu9ludtMBf3IcOnL2P/Lkmks1b1NnWWru4s7mXj8s/An3sgyYHkQzY0OPw5j6LEEzjwueqBoiGo+P4dW6sIMQm5ZGecyuVjg8k3fm/S/mFiIV/6AoiuKLmwC4HJMoxniFv5iU6v3oarrhELVU5IYUXgMAAP//Pd6fMWcCAAA="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/rvps.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3SRT8+bMAzG7/kUfAEI0rQLUg778x56qapu6w4ITW4wNFvqINvQdZ9+Akr1Xiokiyj241+ep/5BQRvzFcVzGDQkct95FEXMjtghI3nMThBHlOzAaQotcvYNeQoezU8gFUeot8R/8kQxEBYK3KOaT50iv7gz9ZdECoGQG/P83cMVHU+DmN0VenT9xXMRkvWJutAiaYCY+61brCj02OZhbhY7D1YRFEXNft3qdH1J8aAwb6R8H1IgdXYUtjF5iPYcaJk2h/Ecg1wOidV9LMvyQ7VUc0pxnNE2P/Jp8aOyadCXdKAzCsyO5rL6ZZ8Kv1aFTdlOwAvCUorfkqiyqP7d8Z95+4ve5Tm0LaNIVhbL90A09SOTxhzntawO4g3uYky9I1GIsVniwvbz3bXYwRh1i+N/AAAA//9WPid7BAIAAA=="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/var/rvps/rvps.json",
+        "contents": {
+          "compression": "",
+          "source": "data:;base64,ewogICAgInN0b3JhZ2UiOiB7CgkidHlwZSI6IkxvY2FsRnMiLAoJImZpbGVfcGF0aCI6ICIvb3B0L2NvbmZpZGVudGlhbC1jb250YWluZXJzL2F0dGVzdGF0aW9uLXNlcnZpY2UvcmVmZXJlbmNlX3ZhbHVlcyIKICAgIH0KfQo="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/as-grpc.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3RSy27cMAy86yv8A7L20F4M6JCmQZFLsEhfh8UiYGTaUaOQDkm7Sb6+sL2bAossBAiERkPOjLT7Sdn27itqkjxYZoo/ZFRDrL7dbi+rCzNUgxmovqNMKO43kGkktL8sj56pZMLaQHo0d9EZyhnsFp/HLKhRpkHrxGSQCcW53eWx3rv38gaeMIK66yfoMfYPSerMITF1uUWyDMW/t9CgBj22Ps+XNSRO7EF9L0NqCswO3M2qKdrqrj5odFdk8jpwJothVAmFE5RwnynMbA/qtuN9yfqwZbH4ebPZfGqW3f3iMs4a/yfkdUnIT1yawIOdlXvKyQmP7cIEEkADqF/Yff1HmZqAlk7P3k452r/ctdjBWOzuOVGZQ+5W6sfQm7t6wRS9V06PaNWmXtZqsPKHab7LBasPFDi3uyY1KGW//Apsv7zGw5Tjq/8LAAD///bG9jFhAgAA"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/var/as/as-config.json",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/0zOQU7EMAwF0DU9RZQ1o1RCs8kesecCUUjMYHVqR44pqlDvjprQUdf/+33/DsYYY39YppBRrDfWcVGXmD4xAynG+yUxaUQCqS6qQtWoyHSpIAsmsM/dKHzHtAagGxLsEJd4ZLKUGpp5s9700RboWlr3TUp6h5n14FoacxaodS98qRbv3A756ziOL7bVtv+B019BeQIKH8ITSFt7esy8Rjn7+Vv6yYxkvbl2ctiGvwAAAP//6M00DRcBAAA="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/var/as/sgx_default_qcnl.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/6xXf2sjyRH935/iMRwElrnR6jYciyB/KLLJKvHaii24uxAYWj01ms72dI+7eyQrYb97qO4ZSbZXSwInDDL9o17Vq6pXLfWfK2Aywbt37zBfr2/u1sv7O8ywbpRHrTRBeSiDvz7e36G2rhUB3iI0hC908BCOIIUneDJeBbWjAtfW/CFANsJsiU+2xRUQYVaLxSM8uR05iKpy5H1czzopfdk7nc2QNSF0fjaZaCuFbqwPs4/vP04nfvs8keSCqpUUQVkz2f1xkl0l99cWQkrqApTxJHtH+LRerx5xukE5PAUEDsx2bADBohba0xWQ9Z7KdLPkO9kMwfU0mP/N9pDCoPcxICxNII3V4hHWQRgbGnKIwQWLLQU89TYQduSO3kJarUUgJ3QBPFBwinZCw9ZYLf6W6MHi5K3HXmkNoffi4I/AEaMiL53aUMWJGZkrgF8aOocpmWglYwaNDaioVoaqHBsbmgGQoRnUQ5jqkr/Jkw3BJa+pQu+V2R6xY3bz7C30eTpFp4rgeh+oGnZ9oZjHQtr2+9ld1jjYPpIgcKwhDm2gm6n5LuV5NMAp9B1JVR+wb5RskrH5asn3PF9Rnm1uiMGqYiiuhqBpK+QBH4r38XhkxFHoncHi4Ta2yKebX0FG2ooqXN88jN3CxLJ/fvtcPunyaUflGVGhGJFHkmORWkbK2UlNyQk2YWiPD8X0jQdO7H8XxGkRY41pFZ0qx4PJA08hcNZZELbGOq6/+kK9DSZf9EqBpUntx4KRx803UKw61kmqhjRwuAmea8UZofWhABa9c2SCPuSwRh+wE7onz83EGWIC+CKL005oVRXAnWUFUKmSjkKQws5PvRUbzR4rfcC+1Bht7wN833XWhdcZ8ql68ux1jNwUH4rpWNyfxbNq+zZCHhBUS5EC/H1xd1tw6T/crB9+e9XErDsDx+9zGDvcHjPakeNaOFbwMqStWjkfsBcqwBpOvLSmGuvFRFjBx6wLjbQtZzsx4aEGE5XtNzqJEdvhI+zzAPTnwyAN0Z+yIi0OkfFKeZHuKQ967qwhE5TQ2Aj5xdY1hN5ap0LTRilJ1yMZ2Qw/D1Q9aqIumRCt7U3ghKcgPDZUW0cgIZuRDY5JIDhhfE0OjfCohdJUYa9CM24pMgHknHVn0NHzbIbp+5MGxYFUdvJL1DzlT4rKbHC+EkUxj2c1xCLL2sYjURnUzravbMW85AmIs8FeWh6SwZ5EVkSVGYSotRWNBfbC1ii5/+cA/VZ4L4YGVxvvSSEbKum5U47KxvYuNpGAsYZ+/Dc5m3oxMUEmJj1aRrxZ4KSpIy8vJ96G0sk43VpqrTucKnTQlEr5L6hcfG0ke3/iD5Ytd6IwYYZ7I1OVnoHHB83wZnEkAsclRyXhw24YlkgTfS9iIqUmYeJDJq0nxDef0IjoYEWaQnr4oBWmZ8nKuWFj33GPxa1gkViEqAM5ZN9mN0P8Ki6Ars/xXkR5gt7agTdPqG1Fzs8uWIufW2X6Z8zww/wf14v5qlzMF59ucvzw6/Vf0v/lp/vPvDB8rT+vrpcPOSah7SbfM/yLMpXd+2+Yvr1fzG/nq9X1fD3/Z1Hw3y2n7dbuLxhc1qd8CdRWV+QghebmLiopuh+fpNH5SI4KBR7IBzHo9DiqEvWseYm6C2jJvseeEZPJKs1KL1pCS6GxFUTXaZbKYJHFiXE4n7vfSG3Umwtpn2H688fT65bbL7k4FA1rYyym7757uIeivUFAKdWJ2NgdQdq2Ze1jKxdam7dallVl0uOCzVvzurGKGMn/FPN5XOOzWlQVZO+D5Sn41JMPaEhExrnzO+FES4GS1DA0v/nOlIPH7TiA+pTgimrR65CGumo7TRxq8v9fPLXTE8an3ycYlDQ5UQ5OlOlngs8ww/AzCdmWQvqBcLYIZIO/2fnisDxlSY6iOM2Oe1/z090Y35urcfX8bv5m96fj7k9nlof/0vfXq69X/w0AAP//5aO5aeQNAAA="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/keyprovider.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/4yRTWvjMBCG7/oVYu+yfFkIBh32I4ewEHLYtoc0FFme2MLKjBmN0/rfFzsf5FKoBGIOep/3gdk/YZSD+gs5cBwkErr/PGYB0P9g0jumc2yA1YtHyQ5B3ol7Q5giQiGeWxD16yjArofJtIDAfqYUgVB8RGCl9n9u80Hdx60/wZwZbg2bk2/BtV3gIpINhMfYAEr0ydxZ2QYKZB5iVfICWdT2YubkIl9cTdUahaeBIoqzY2abKPhk64gL6e1RYDfWKeZuRyzuZ1mWZbW86pnSeAI3ZuC5OVeWBvlSsK+zvX9V6w8IzphMoQfRZbHcC1cb09dZdyJDZedYtSpXpX5Vej7G+FE6M3A8e4EZpr9fa6+xoofph1L7DWbxKR2WLULze3INHP2Y5LbBzwAAAP//1Ys0twYCAAA="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/trustee.network",
+        "contents": {
+          "compression": "",
+          "source": "data:,%5BNetwork%5D%0ADriver%3Dbridge%0ASubnet%3D10.89.0.0%2F24%0AGateway%3D10.89.0.1%0A%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/containers/systemd/kbs-client.container",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3SOPW7DMAyFd57CF5C1F9CStkNQIEv/BsMDI9EuYZkKRKptbl8URt0p20fiI98bXoVthAfSWPliXCS81KZG1D0dnruYmcS6WMSQhSrAcP/HI+x4wpXCcla3+XBccaYwf8Tac/GxyMSJxBiz21+pV8OZkuNfWf3/+baBE9lXqUuwrU8v2wxvJbeVQlOqbqGr3vlysZshy1n9rsLjN8VgyLlzU+cTfXppOQMMR1HDnEd4RzFKh2tINGHL1hvWmQzgJwAA//8KU18DKgEAAA=="
+        },
+        "mode": 420
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "dropins": [
+          {
+            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure`\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\n",
+            "name": "autologin-core.conf"
+          }
+        ],
+        "name": "serial-getty@ttyS0.service"
+      }
+    ]
+  }
+}
